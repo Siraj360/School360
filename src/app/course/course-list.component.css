@@ -1,0 +1,15 @@
+table.timeline {
+    width: 100%;
+    display:block;
+}
+table.timeline > thead {
+    display: inline-block;
+    width: 100%;
+    height: 20px;
+}
+table.timeline > tbody {
+    height: 200px;
+    display: inline-block;
+    width: 100%;
+    overflow: auto;
+}

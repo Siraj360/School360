@@ -1,0 +1,132 @@
+<!--
+     <pre>
+    {{SchoolData   | json}}
+</pre>
+ -->
+
+<div class="container-flude p-y-1 p-x-1">
+        <h4 class="text-primary">Course listing with students enrolled in the course</h4>
+
+  <div class="row">
+
+
+    <table class="table">
+      <thead class="thead-inverse">
+        <tr>
+          <th class="hidden-xs-down"></th>
+          <th>Title</th>
+          <th class="hidden-sm-down">Description</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let Course of SchoolData.Courses; let idx = index">
+        <tr class="table-warning">
+          <td class="hidden-xs-down text-center">
+            <span class="label label-default label-pill">{{idx + 1}}</span>
+          </td>
+
+          <td>
+            <strong>{{Course.Name}}                           
+                        </strong>
+            <div class="text-muted hidden-md-up">
+              {{Course.Description}}
+            </div>
+          </td>
+          <td class="hidden-sm-down">
+            {{Course.Description}}
+
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3" [style.padding]="0">
+
+
+            <table class="table tbl-rating">
+              <thead>
+                <tr>
+                  <th class="hidden-sm-down"></th>
+                  <th>Student Name</th>
+                  <th class="hidden-sm-down">Course</th>
+                  <th class="hidden-xs-down">Year</th>
+                  <th class="hidden-xs-down">Grade</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="5" *ngIf="(SchoolData.Students | filter: {CourseID: Course.CourseID }).length <=0">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>No students </strong> for a course {{Course.Name}}.
+                    </div>
+                  </td>
+                </tr>
+                <tr *ngFor="let student of SchoolData.Students | filter: {CourseID: Course.CourseID }; let idx = index" (click)="openPopup()">
+                  <td class="hidden-sm-down text-center">
+                    <span class="label label-warning label-pill">{{idx + 1}}</span>
+                  </td>
+
+                  <td>
+                    <strong>{{student.Name}}                    
+                        </strong>
+                    <div class="text-muted hidden-md-up">
+                      <div>Course: {{getCourseName(student.CourseID)}} </div>
+                    </div>
+                    <div class="text-muted hidden-sm-up">
+
+                      <div>Year: {{student.Year}} </div>
+                      <div>Year: {{student.Grade}} </div>
+                    </div>
+                  </td>
+                  <td class="hidden-sm-down">
+                    {{getCourseName(student.CourseID)}}
+
+
+                  </td>
+                  <td class="hidden-xs-down">
+                    {{student.Year}}
+
+                  </td>
+                  <td class="hidden-xs-down">
+                    {{student.Grade}}
+
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+
+
+
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<!--
+<div bsModal #timeLineModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md" *ngIf="selectedTimeLine" >
+     <div class="modal-body">
+                    <history-item 
+                     [time-line]="selectedTimeLine"
+                     [timeLineModal] ="timeLineModal"
+                     >
+                 </history-item>
+
+
+ 
+      </div>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+    </div>
+
+   
+  </div>
+    -->

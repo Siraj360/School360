@@ -1,0 +1,8 @@
+/*Hover issue fix, it was mix-up of calsses, to clen up*/
+.navbar > ui >li:hover,
+.navbar-nav .nav-link:hover
+{
+   background-color: transparent !Important;
+   color: white !important;
+}
+

@@ -1,0 +1,199 @@
+@import "style360/teal/variables.scss";
+
+/* ----------------
+    Menu Customization 
+--------------------*/
+
+.navbar-siraj360 {
+    background-color: $menu-bg;
+    font-weight: 500;
+    border-width: 0;
+    color: $section-bg;
+    max-height: 50px;
+}
+
+.navbar-siraj360-brand {
+    color: $menu-color !important
+}
+
+
+
+.navbar-siraj360 .navbar-nav>li>a {
+    color: $section-bg;
+}
+
+.navbar-siraj360 .dropdown-menu li>a:hover {
+    color: $section-bg;
+}
+
+.navbar-siraj360 .navbar-nav li>a:hover,
+.navbar-siraj360 .open .dropdown-toggle,
+{
+    background-color: $menu-active-bg !important;
+    color: $dark-color !important;
+}
+
+.navbar-siraj360 .navbar-nav>.dropdown>a .caret {
+    border-top-color: $menu-caret;
+    border-bottom-color: $menu-caret;
+}
+
+.navbar-collapse.in {
+    /*3.0.2 bug workaround*/
+    overflow-y: visible;
+}
+
+.navbar-toggle {
+    outline: 0;
+}
+
+.divider {
+    height: 50px;
+}
+
+//----------------Menu Customization
+
+
+@import "style360/teal/variables.scss";
+
+/* ----------------
+    Mega- Menu / contact menu
+--------------------*/
+
+$menu-txt-header: $siraj360-15;
+$menu-txt-dark: $siraj360-17;
+$menu-txt-darker: $siraj360-18;
+$menu-background: $siraj360-03;
+$menu-fotter-bg: $siraj360-07;
+$menu-link: $siraj360-18;
+
+.txt-dark
+{
+    color: $menu-txt-dark;
+}
+
+.contact-menu {
+
+    background-color: $menu-background !important;
+    padding: 10px 30px 0 30px;
+   
+}
+
+
+
+.no-margin {
+    margin: 0 !important;
+}
+
+.menu-image {
+    margin-top: -25px !important;
+    margin-bottom: -15px !important;
+}
+
+.menu-title-main {
+    color: $menu-txt-dark !important;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.menu-title {
+    color: $menu-txt-dark !important;
+    text-align: center;
+    font-weight: 400;
+}
+
+.menu-title700 {
+    color: $menu-txt-dark !important;
+    text-align: center;
+    font-weight: 700;
+}
+
+.mega-dropdown {
+    position: static !important;
+}
+
+.mega-dropdown-menu {
+    padding: 20px 15px 15px !important;
+    text-align: center !important;
+    width: 100% !important;
+    background-color: $menu-background !important;
+    margin-top: -1px;
+}
+
+.menu-footer {
+    padding: 15px !important;
+    text-align: center !important;
+    background-color: $menu-fotter-bg !important;
+    margin: 0 -15px -15px -15px;
+}
+
+.mega-dropdown-menu > li {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    list-style-type: none;
+}
+
+.mega-dropdown-menu > li > ul {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    list-style-type: none;
+}
+
+.mega-dropdown-menu > li > ul > li {
+    text-align: left;
+    list-style-type: none;
+}
+
+.mega-dropdown-menu > li > ul > li.in-line {
+    text-align: left;
+    float: left;
+}
+
+.mega-dropdown-menu > li > ul > li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.428571429;
+    color: $menu-link;
+    white-space: normal;
+    cursor: pointer;
+}
+
+.mega-dropdown-menu > li ul > li > a:hover,
+.mega-dropdown-menu > li ul > li > a:focus {
+    text-decoration: none;
+    color: $menu-txt-darker;
+}
+
+.mega-dropdown-menu > li ul > li > a.active-menu-itme
+{
+    text-decoration: none;
+    color: darker($menu-txt-darker, 10%);
+    font-weight: bold;
+    margin-left: -16px;
+    &:before {
+      content:  "\2713 ";
+    }
+}
+
+
+
+.mega-dropdown-menu .dropdown-header {
+    color: $menu-txt-header;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.mega-dropdown-menu form {
+    margin: 3px 20px;
+}
+
+.mega-dropdown-menu .form-group {
+    margin-bottom: 3px;
+}
+
+

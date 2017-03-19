@@ -1,0 +1,672 @@
+{
+  "Courses": [{
+      "$id": "1",
+      "CourseID": 1,
+      "Name": "Online Inventory Managment System",
+      "Code": "OIMS",
+      "Description": "Online Inventory Managment System",
+      "isSelect": false,
+      "isDisable": false
+    },
+    {
+      "$id": "2",
+      "CourseID": 2,
+      "Name": "Fundamentals of Supply & Demand Logistics",
+      "Code": "FSDL",
+      "Description": "Fundamentals of supply and demand logistics",
+      "isSelect": false,
+      "isDisable": false
+    },
+    {
+      "$id": "3",
+      "CourseID": 3,
+      "Name": "Call Center Management Process ",
+      "Code": "CCMP",
+      "Description": "Call Center Management Process ",
+      "isSelect": false,
+      "isDisable": false
+    },
+    {
+      "$id": "4",
+      "CourseID": 4,
+      "Name": "Refund Process Admin System",
+      "Code": "RPAS",
+      "Description": "Refund Process Admin System",
+      "isSelect": false,
+      "isDisable": false
+    },
+    {
+      "$id": "5",
+      "CourseID": 5,
+      "Name": "Fundamentals of Inventory Management",
+      "Code": "FIMN",
+      "Description": "Fundamentals of inventory management",
+      "isSelect": false,
+      "isDisable": false
+    },
+    {
+      "$id": "6",
+      "CourseID": 6,
+      "Name": "Product & Product Code Familiarization",
+      "Code": "PPCF",
+      "Description": "Product & Product Code Familiarization",
+      "isSelect": false,
+      "isDisable": false
+    }
+  ],
+
+  "Students": [{
+      "$id": "1",
+      "StudentID": 1,
+      "HireDate": "1999-12-12T00:00:00",
+      "Name": "Siraj Gadhia",
+      "StudentCourses": [{
+          "$id": "2",
+          "StudentCourseID": 168,
+          "StudentID": 1,
+          "CourseID": 1,
+          "isComplete": true
+        },
+        {
+          "$id": "3",
+          "StudentCourseID": 169,
+          "StudentID": 1,
+          "CourseID": 2,
+          "isComplete": false
+        },
+        {
+          "$id": "4",
+          "StudentCourseID": 170,
+          "StudentID": 1,
+          "CourseID": 3,
+          "isComplete": false
+        },
+        {
+          "$id": "5",
+          "StudentCourseID": 171,
+          "StudentID": 1,
+          "CourseID": 5,
+          "isComplete": true
+
+        }
+      ],
+      "isShowCourses": false
+    },
+    {
+      "$id": "6",
+      "StudentID": 2,
+      "HireDate": "2004-12-12T00:00:00",
+      "Name": "Amitkumar Patel",
+      "StudentCourses": [{
+          "$id": "7",
+          "StudentCourseID": 5,
+          "StudentID": 2,
+          "CourseID": 1,
+          "isComplete": true
+        },
+        {
+          "$id": "8",
+          "StudentCourseID": 6,
+          "StudentID": 2,
+          "CourseID": 2,
+          "isComplete": true
+        },
+        {
+          "$id": "9",
+          "StudentCourseID": 7,
+          "StudentID": 2,
+          "CourseID": 3,
+          "isComplete": true
+        },
+        {
+          "$id": "10",
+          "StudentCourseID": 8,
+          "StudentID": 2,
+          "CourseID": 4,
+          "isComplete": true
+        }
+      ],
+      "isShowCourses": false
+    },
+    {
+      "$id": "11",
+      "StudentID": 3,
+      "HireDate": "2009-12-12T00:00:00",
+      "Name": "Zach Werde",
+      "StudentCourses": [{
+          "$id": "12",
+          "StudentCourseID": 9,
+          "StudentID": 3,
+          "CourseID": 1,
+          "isComplete": false
+      },
+          {
+            "$id": "13",
+            "StudentCourseID": 10,
+            "StudentID": 3,
+            "CourseID": 2,
+            "isComplete": false
+          },
+          {
+            "$id": "14",
+            "StudentCourseID": 11,
+            "StudentID": 3,
+            "CourseID": 3,
+            "isComplete": false
+          },
+          {
+            "$id": "15",
+            "StudentCourseID": 12,
+            "StudentID": 3,
+            "CourseID": 4,
+            "isComplete": false
+          }
+        ],
+        "isShowCourses": false
+      },
+      {
+        "$id": "26",
+        "StudentID": 14,
+        "HireDate": "2013-12-15T00:00:00",
+        "Name": "Danny Keegan",
+        "StudentCourses": [{
+            "$id": "27",
+            "StudentCourseID": 25,
+            "StudentID": 14,
+            "CourseID": 2,
+            "isComplete": false
+          },
+          {
+            "$id": "28",
+            "StudentCourseID": 26,
+            "StudentID": 14,
+            "CourseID": 4,
+            "isComplete": false
+          },
+          {
+            "$id": "29",
+            "StudentCourseID": 27,
+            "StudentID": 14,
+            "CourseID": 5,
+            "isComplete": true
+          },
+          {
+            "$id": "30",
+            "StudentCourseID": 28,
+            "StudentID": 14,
+            "CourseID": 6,
+            "isComplete": false
+          }
+        ],
+        "isShowCourses": false
+      },
+      {
+        "$id": "31",
+        "StudentID": 15,
+        "HireDate": "2013-12-15T00:00:00",
+        "Name": "Rodney Lewis",
+        "StudentCourses": [{
+            "$id": "32",
+            "StudentCourseID": 29,
+            "StudentID": 15,
+            "CourseID": 1,
+            "isComplete": false
+          },
+          {
+            "$id": "33",
+            "StudentCourseID": 30,
+            "StudentID": 15,
+            "CourseID": 2,
+            "isComplete": false
+          },
+          {
+            "$id": "34",
+            "StudentCourseID": 31,
+            "StudentID": 15,
+            "CourseID": 5,
+            "isComplete": false
+          },
+          {
+            "$id": "35",
+            "StudentCourseID": 32,
+            "StudentID": 15,
+            "CourseID": 6,
+            "isComplete": true
+          }
+        ],
+        "isShowCourses": false
+      },
+      {
+        "$id": "36",
+        "StudentID": 16,
+        "HireDate": "2013-12-15T00:00:00",
+        "Name": "Adrian Dilley",
+        "StudentCourses": [{
+            "$id": "37",
+            "StudentCourseID": 33,
+            "StudentID": 16,
+            "CourseID": 2,
+            "isComplete": false
+          },
+          {
+            "$id": "38",
+            "StudentCourseID": 34,
+            "StudentID": 16,
+            "CourseID": 3,
+            "isComplete": false
+        },
+        {
+          "$id": "39",
+          "StudentCourseID": 35,
+          "StudentID": 16,
+          "CourseID": 4,
+          "isComplete": false
+        },
+        {
+          "$id": "40",
+          "StudentCourseID": 36,
+          "StudentID": 16,
+          "CourseID": 5,
+          "isComplete": true
+        }
+      ],
+      "isShowCourses": false
+    },
+    {
+      "$id": "41",
+      "StudentID": 17,
+      "HireDate": "2013-12-15T00:00:00",
+      "Name": "Robert Reyes",
+      "StudentCourses": [{
+          "$id": "42",
+          "StudentCourseID": 37,
+          "StudentID": 17,
+          "CourseID": 1,
+          "isComplete": true
+        },
+        {
+          "$id": "43",
+          "StudentCourseID": 38,
+          "StudentID": 17,
+          "CourseID": 3,
+          "isComplete": false
+        },
+        {
+          "$id": "44",
+          "StudentCourseID": 39,
+          "StudentID": 17,
+          "CourseID": 4,
+          "isComplete": false
+        },
+        {
+          "$id": "45",
+          "StudentCourseID": 40,
+          "StudentID": 17,
+          "CourseID": 5,
+          "isComplete": false
+        }
+        ],
+        "isShowCourses": false
+      },
+      {
+        "$id": "46",
+        "StudentID": 18,
+        "HireDate": "2013-12-15T00:00:00",
+        "Name": "Stephanie Reese",
+        "StudentCourses": [{
+            "$id": "47",
+            "StudentCourseID": 41,
+            "StudentID": 18,
+            "CourseID": 1,
+            "isComplete": false
+          },
+          {
+            "$id": "48",
+            "StudentCourseID": 42,
+            "StudentID": 18,
+            "CourseID": 3,
+            "isComplete": true
+          },
+          {
+            "$id": "49",
+            "StudentCourseID": 43,
+            "StudentID": 18,
+            "CourseID": 4,
+            "isComplete": true
+          },
+          {
+            "$id": "50",
+            "StudentCourseID": 44,
+            "StudentID": 18,
+            "CourseID": 6,
+            "isComplete": false
+          }
+        ],
+        "isShowCourses": false
+      },
+      {
+        "$id": "51",
+        "StudentID": 19,
+        "HireDate": "2013-12-15T00:00:00",
+        "Name": "Robert Manon",
+        "StudentCourses": [{
+            "$id": "52",
+            "StudentCourseID": 45,
+            "StudentID": 19,
+            "CourseID": 1,
+            "isComplete": false
+          },
+          {
+            "$id": "53",
+            "StudentCourseID": 46,
+            "StudentID": 19,
+            "CourseID": 3,
+            "isComplete": true
+          },
+          {
+            "$id": "54",
+            "StudentCourseID": 47,
+            "StudentID": 19,
+            "CourseID": 4,
+            "isComplete": false
+          },
+          {
+            "$id": "55",
+            "StudentCourseID": 48,
+            "StudentID": 19,
+            "CourseID": 6,
+            "isComplete": false
+          }
+        ],
+        "isShowCourses": false
+      },
+      {
+        "$id": "56",
+        "StudentID": 20,
+        "HireDate": "2013-12-15T00:00:00",
+        "Name": "Mary Parsons",
+        "StudentCourses": [{
+            "$id": "57",
+            "StudentCourseID": 49,
+            "StudentID": 20,
+            "CourseID": 2,
+            "isComplete": false
+          },
+          {
+            "$id": "58",
+            "StudentCourseID": 50,
+            "StudentID": 20,
+            "CourseID": 3,
+            "isComplete": true
+          },
+          {
+            "$id": "59",
+            "StudentCourseID": 51,
+            "StudentID": 20,
+            "CourseID": 4,
+            "isComplete": true
+          },
+          {
+            "$id": "60",
+            "StudentCourseID": 52,
+            "StudentID": 20,
+            "CourseID": 6,
+            "isComplete": true
+          }
+        ],
+        "isShowCourses": false
+      },
+      {
+        "$id": "61",
+        "StudentID": 21,
+        "HireDate": "2013-12-15T00:00:00",
+        "Name": "Audrey Amanda",
+        "StudentCourses": [{
+            "$id": "62",
+            "StudentCourseID": 53,
+            "StudentID": 21,
+            "CourseID": 1,
+            "isComplete": false
+          },
+          {
+            "$id": "63",
+            "StudentCourseID": 54,
+            "StudentID": 21,
+            "CourseID": 2,
+            "isComplete": false
+          },
+          {
+            "$id": "64",
+            "StudentCourseID": 55,
+            "StudentID": 21,
+            "CourseID": 4,
+            "isComplete": true
+          },
+          {
+            "$id": "65",
+            "StudentCourseID": 56,
+            "StudentID": 21,
+            "CourseID": 5,
+            "isComplete": false
+          }
+        ],
+        "isShowCourses": false
+      },
+      {
+        "$id": "66",
+        "StudentID": 22,
+        "HireDate": "2013-12-15T00:00:00",
+        "Name": "Sweeney Holtzclaw",
+        "StudentCourses": [{
+            "$id": "67",
+            "StudentCourseID": 57,
+            "StudentID": 22,
+            "CourseID": 1,
+            "isComplete": true
+          },
+          {
+            "$id": "68",
+            "StudentCourseID": 58,
+            "StudentID": 22,
+            "CourseID": 2,
+            "isComplete": false
+          },
+          {
+            "$id": "69",
+            "StudentCourseID": 59,
+            "StudentID": 22,
+            "CourseID": 3,
+            "isComplete": false
+          },
+          {
+            "$id": "70",
+            "StudentCourseID": 60,
+            "StudentID": 22,
+            "CourseID": 5,
+            "isComplete": false
+          }
+        ],
+        "isShowCourses": false
+      },
+      {
+        "$id": "71",
+        "StudentID": 23,
+        "HireDate": "2013-12-15T00:00:00",
+        "Name": "Sana Shing",
+        "StudentCourses": [{
+            "$id": "72",
+            "StudentCourseID": 61,
+            "StudentID": 23,
+            "CourseID": 2,
+            "isComplete": false
+          },
+          {
+            "$id": "73",
+            "StudentCourseID": 62,
+            "StudentID": 23,
+            "CourseID": 4,
+            "isComplete": false
+          },
+          {
+            "$id": "74",
+            "StudentCourseID": 63,
+            "StudentID": 23,
+            "CourseID": 5,
+            "isComplete": true
+          },
+          {
+            "$id": "75",
+            "StudentCourseID": 64,
+            "StudentID": 23,
+            "CourseID": 6,
+            "isComplete": false
+          }
+        ],
+        "isShowCourses": false
+      },
+      {
+        "$id": "76",
+        "StudentID": 24,
+        "HireDate": "2013-12-15T00:00:00",
+        "Name": "Laila Marchant",
+        "StudentCourses": [{
+            "$id": "77",
+            "StudentCourseID": 102,
+            "StudentID": 24,
+            "CourseID": 1,
+            "isComplete": false
+          },
+          {
+            "$id": "78",
+            "StudentCourseID": 103,
+            "StudentID": 24,
+            "CourseID": 2,
+            "isComplete": false
+          },
+          {
+            "$id": "79",
+            "StudentCourseID": 104,
+            "StudentID": 24,
+            "CourseID": 3,
+            "isComplete": false
+          },
+          {
+            "$id": "80",
+            "StudentCourseID": 105,
+            "StudentID": 24,
+            "CourseID": 4,
+            "isComplete": false
+          }
+        ],
+        "isShowCourses": false
+      },
+      {
+        "$id": "81",
+        "StudentID": 25,
+        "HireDate": "2013-12-15T00:00:00",
+        "Name": "Ravi Vijay",
+        "StudentCourses": [{
+            "$id": "82",
+            "StudentCourseID": 69,
+            "StudentID": 25,
+            "CourseID": 1,
+            "isComplete": false
+          },
+          {
+            "$id": "83",
+            "StudentCourseID": 70,
+            "StudentID": 25,
+            "CourseID": 2,
+            "isComplete": true
+          },
+          {
+            "$id": "84",
+            "StudentCourseID": 71,
+            "StudentID": 25,
+            "CourseID": 5,
+            "isComplete": false
+        },
+        {
+          "$id": "85",
+          "StudentCourseID": 72,
+          "StudentID": 25,
+          "CourseID": 6,
+          "isComplete": false
+        }
+      ],
+      "isShowCourses": false
+    },
+    {
+      "$id": "86",
+      "StudentID": 26,
+      "HireDate": "2013-12-24T00:00:00",
+      "Name": "Haresh Makadiya",
+      "StudentCourses": [{
+          "$id": "87",
+          "StudentCourseID": 95,
+          "StudentID": 26,
+          "CourseID": 3,
+          "isComplete": false
+        },
+        {
+          "$id": "88",
+          "StudentCourseID": 96,
+          "StudentID": 26,
+          "CourseID": 4,
+          "isComplete": false
+        },
+        {
+          "$id": "89",
+          "StudentCourseID": 97,
+          "StudentID": 26,
+          "CourseID": 5,
+          "isComplete": false
+        },
+        {
+          "$id": "90",
+          "StudentCourseID": 98,
+          "StudentID": 26,
+          "CourseID": 6,
+          "isComplete": false
+        }
+      ],
+      "isShowCourses": false
+    },
+    {
+      "$id": "91",
+      "StudentID": 27,
+      "HireDate": "2000-09-08T00:00:00",
+      "Name": "Rekha Chatbar",
+      "StudentCourses": [{
+          "$id": "92",
+          "StudentCourseID": 152,
+          "StudentID": 27,
+          "CourseID": 1,
+          "isComplete": true
+        },
+        {
+          "$id": "93",
+          "StudentCourseID": 153,
+          "StudentID": 27,
+          "CourseID": 2,
+          "isComplete": true
+        },
+        {
+          "$id": "94",
+          "StudentCourseID": 154,
+          "StudentID": 27,
+          "CourseID": 3,
+          "isComplete": true
+        },
+        {
+          "$id": "95",
+          "StudentCourseID": 155,
+          "StudentID": 27,
+          "CourseID": 6,
+          "isComplete": true
+        }
+      ],
+      "isShowCourses": false
+    }
+  ]
+}

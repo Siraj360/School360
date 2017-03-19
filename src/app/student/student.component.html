@@ -1,0 +1,72 @@
+ 
+ 
+
+<div class="container-flude p-y-1 p-x-1">
+      <h4 class="text-primary">Student Dashboard</h4> 
+    
+    <div class="row">
+
+<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" *ngFor="let student of SchoolData.Students">
+<div class="card text-center">
+
+  <div class="card-block table-info" style="margin-bottom: -10px !important;">
+         <h4 class="card-title">{{student.Name}}</h4>
+  </div>
+    
+    <div class="card-block" style="margin-bottom: -10px;">
+     <strong>Course:</strong><br> 
+    <div   style="height: 80px;" >
+       
+       <span [ngClass]="{'table-danger': student.CourseID < 0} " >
+           <i  class="fa fa-exclamation-circle warnning" *ngIf="student.CourseID < 0" aria-hidden="true"></i>
+            {{getCourseName(student.CourseID)}} 
+            </span>
+    </div>
+    <button type="button" (click) = "updateCourse(student)" class="btn btn-secondry btn-sm">
+     {{student.CourseID < 0 ? 'Add' : 'Change' }} Course
+      </button>
+    <button type="button" (click) = "removeCourse(student.StudentID)" class="btn btn-danger btn-sm">Remove Course</button>    
+     </div>
+ 
+  <ul class="list-group list-group-flush">
+
+    <li class="list-group-item"><strong>Year:</strong> {{student.Year}}</li>
+    <li class="list-group-item"><strong>Grade:</strong> {{student.Grade}}
+     
+    </li>
+
+  </ul>
+
+  </div>
+</div>
+</div>
+</div>
+
+<div bsModal #scModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title pull-left">{{updateStudent.Name}}</h4>
+        <button type="button" class="close pull-right" (click)="scModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+<div class="card" >
+  <ul class="list-group list-group-flush" >
+      <li class="list-group-item">
+         <strong>Current enrolled course:</strong><br> 
+         <h4>{{getCourseName(updateStudent.CourseID)}}</h4>
+         <h6 class="text-danger">Please click on a below course to {{updateStudent.CourseID < 0 ? 'add ' : 'replace' }} a course.</h6>
+      </li>
+    <li class="list-group-item" (click)="replaceCourse(course.CourseID)"  [style.cursor] ="'pointer'"
+    [hidden]="updateStudent.CourseID==course.CourseID" *ngFor="let course of SchoolData.Courses; let idx = index">
+          {{course.Name}}
+    </li>
+  </ul>
+</div>
+
+
+
+    </div>
+  </div>
+</div>

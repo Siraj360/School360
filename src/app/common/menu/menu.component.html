@@ -1,0 +1,51 @@
+<div class="pos-f-t">
+
+    <div [@contactMenuTrigger]="contactMenuState" *ngIf="isShowContact">
+        <contact (close)="onContactClose($event)"></contact>
+    </div>
+
+    <nav [@contactMenuTrigger]="contactMenuState"  class="navbar navbar-static-top navbar-full navbar-siraj360 p-t-4">
+        <ul class="nav navbar-nav list-inline">
+            <img  style="height:34px" src="images/logo-white.png" />
+            <a class="navbar-brand" routerLink="/home" routerLinkActive="active">
+               <span class="hidden-sm-down">Siraj 360 : </span>
+                <span>School360</span> 
+            </a>
+
+
+            <li 
+            class="navbar-toggler pull-xs-right" type="button" (click)="openContactMenu(!isShowContact); isShowMenu=false;">
+                <span class="fa fa-commenting"></span>
+            </li>
+    
+    <li class="nav-item pull-xs-right">
+         <a class="nav-link" href="#" routerLink="/course" routerLinkActive="active" type="button" (click)="isShowContact = false;">
+             <span class="fa fa-graduation-cap"></span>
+                  <span class="hidden-xs-down">Course</span>
+             
+             </a>
+      </li>
+
+    <li class="nav-item pull-xs-right">
+         <a class="nav-link" href="#" routerLink="/student" routerLinkActive="active" type="button" (click)="isShowContact = false;">
+             <span class="fa fa-address-card-o"></span>
+                <span class="hidden-xs-down">Student</span>
+              &nbsp; &nbsp;
+             </a>
+      </li>
+     
+
+
+          <li class="nav-item School-nav pull-xs-right">
+         <a class="nav-link School-nav" href="#" routerLink="/home" routerLinkActive="active" type="button" (click)="isShowContact = false;">
+             <span class="fa fa-home"></span>
+                <span class="hidden-xs-down">Home</span>
+             
+             </a>
+      </li>
+
+          
+        </ul>
+
+    </nav>
+</div>
