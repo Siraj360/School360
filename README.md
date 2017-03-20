@@ -2,6 +2,8 @@
 
 # School360
 
+![alt tag](https://github.com/SirajGadhia/School360/blob/master/S360H.PNG)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.0.
 
 ## Development server
