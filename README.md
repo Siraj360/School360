@@ -1,6 +1,6 @@
 ![alt tag](https://yt3.ggpht.com/-NXR_RPbtSBU/AAAAAAAAAAI/AAAAAAAAAAA/qsMT6VMwojU/s88-c-k-no/photo.jpg) 
 
-# School360
+# School360 : Angular 2 in action!
 
 ![alt tag](https://github.com/SirajGadhia/School360/blob/master/S360H.PNG)
 
