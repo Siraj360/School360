@@ -34,6 +34,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ![alt tag](https://github.com/SirajGadhia/School360/blob/master/S3602.PNG)
 
-![alt tag]https://github.com/SirajGadhia/School360/blob/master/S3603.PNG)
+![alt tag](https://github.com/SirajGadhia/School360/blob/master/S3603.PNG)
 
 
