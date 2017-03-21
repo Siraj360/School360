@@ -1,4 +1,12 @@
-# College360
+![alt tag](https://yt3.ggpht.com/-NXR_RPbtSBU/AAAAAAAAAAI/AAAAAAAAAAA/qsMT6VMwojU/s88-c-k-no/photo.jpg) 
+
+# School360 : Angular 2 in action!
+
+![alt tag](https://github.com/SirajGadhia/School360/blob/master/S360H.PNG)
+
+This applicationrunning online at http://www.siraj360.com/School360/ 
+
+This application is developed with Angular 2.4.x, TypeScript, angular-cli, ng2-bootstrap, SASS, RWD and Bootstrap 4.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.0.
 
@@ -25,3 +33,13 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Application ScreenShot
+
+![alt tag](https://github.com/SirajGadhia/School360/blob/master/S3601.PNG)
+
+![alt tag](https://github.com/SirajGadhia/School360/blob/master/S3602.PNG)
+
+![alt tag](https://github.com/SirajGadhia/School360/blob/master/S3603.PNG)
+
+
