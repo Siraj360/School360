@@ -1,72 +1,155 @@
- 
- 
-
 <div class="container-flude p-y-1 p-x-1">
-      <h4 class="text-primary">Student Dashboard</h4> 
-    
-    <div class="row">
-
-<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" *ngFor="let student of SchoolData.Students">
-<div class="card text-center">
-
-  <div class="card-block table-info" style="margin-bottom: -10px !important;">
-         <h4 class="card-title">{{student.Name}}</h4>
+  <div class="row">
+    <div class="col-md-6">
+      <h4 class="text-primary">Student Dashboard</h4>
+    </div>
+    <div class="col-md-6">
+      <button type="button" (click)="editStudent()" class="btn btn-success pull-right btn-sm">
+        <i class="fa fa-plus-square-o" aria-hidden="true"></i> Add Student</button>
+    </div>
   </div>
-    
-    <div class="card-block" style="margin-bottom: -10px;">
-     <strong>Course:</strong><br> 
-    <div   style="height: 80px;" >
-       
-       <span [ngClass]="{'table-danger': student.CourseID < 0} " >
+
+
+  <div class="row">
+
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" *ngFor="let student of SchoolData.Students">
+      <div class="card text-center">
+
+        <div class="card-block table-info" style="margin-bottom: -10px !important;">
+          <h4 class="card-title">{{student.Name}}</h4>
+        <button type="button" (click)="editStudent(student)" class="btn btn-primary btn-sm">
+         <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit
+       </button>
+        </div>
+
+        <div class="card-block" style="margin-bottom: -10px;">
+          <strong>Course:</strong><br>
+          <div style="height: 80px;">
+
+            <span [ngClass]="{'table-danger': student.CourseID < 0} ">
            <i  class="fa fa-exclamation-circle warnning" *ngIf="student.CourseID < 0" aria-hidden="true"></i>
             {{getCourseName(student.CourseID)}} 
             </span>
-    </div>
-    <button type="button" (click) = "updateCourse(student)" class="btn btn-secondry btn-sm">
+          </div>
+          <button type="button" (click)="updateCourse(student)" class="btn btn-secondry btn-sm">
      {{student.CourseID < 0 ? 'Add' : 'Change' }} Course
       </button>
-    <button type="button" (click) = "removeCourse(student.StudentID)" class="btn btn-danger btn-sm">Remove Course</button>    
-     </div>
- 
-  <ul class="list-group list-group-flush">
+          <button type="button" (click)="removeCourse(student.StudentID)" class="btn btn-danger btn-sm">Remove Course</button>
+        </div>
 
-    <li class="list-group-item"><strong>Year:</strong> {{student.Year}}</li>
-    <li class="list-group-item"><strong>Grade:</strong> {{student.Grade}}
-     
-    </li>
+        <ul class="list-group list-group-flush">
 
-  </ul>
+          <li class="list-group-item"><strong>Year:</strong> {{student.Year}}</li>
+          <li class="list-group-item"><strong>Grade:</strong> {{student.Grade}}
 
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
   </div>
 </div>
-</div>
-</div>
 
-<div bsModal #scModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div bsModal #scModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="coursechange" aria-hidden="true">
   <div class="modal-dialog modal-md">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title pull-left">{{updateStudent.Name}}</h4>
         <button type="button" class="close pull-right" (click)="scModal.hide()" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
+        <h4 class="modal-title pul-left"><strong>{{updateStudent.Name}}</strong></h4>
+
       </div>
-<div class="card" >
-  <ul class="list-group list-group-flush" >
-      <li class="list-group-item">
-         <strong>Current enrolled course:</strong><br> 
-         <h4>{{getCourseName(updateStudent.CourseID)}}</h4>
-         <h6 class="text-danger">Please click on a below course to {{updateStudent.CourseID < 0 ? 'add ' : 'replace' }} a course.</h6>
-      </li>
-    <li class="list-group-item" (click)="replaceCourse(course.CourseID)"  [style.cursor] ="'pointer'"
-    [hidden]="updateStudent.CourseID==course.CourseID" *ngFor="let course of SchoolData.Courses; let idx = index">
-          {{course.Name}}
-    </li>
-  </ul>
-</div>
+      <div class="card">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <strong>Current enrolled course:</strong><br>
+            <h4>{{getCourseName(updateStudent.CourseID)}}</h4>
+            <h6 class="text-danger">Please click on a below course to {{updateStudent.CourseID
+              < 0 ? 'add ' : 'replace' }} a course.</h6>
+          </li>
+          <li class="list-group-item" (click)="replaceCourse(course.CourseID)" [style.cursor]="'pointer'" [hidden]="updateStudent.CourseID==course.CourseID"
+            *ngFor="let course of SchoolData.Courses; let idx = index">
+            {{course.Name}}
+          </li>
+        </ul>
+      </div>
 
 
 
     </div>
   </div>
 </div>
+
+
+<div bsModal #editModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="studentedit" aria-hidden="true">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close pull-right" (click)="editModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+             </button>
+        <h4 class="modal-title pul-left"><strong>
+          {{this.isNewStudent? 'New Student' : updateStudent.Name }}
+          
+          </strong></h4>
+
+
+      </div>
+  
+      <form (ngSubmit)="saveChanges()" #studentForm="ngForm" >
+       
+        <div class="modal-body row">
+          <div class="form-group col-md-12 col-lg-12">
+            <label for="txtName">Name</label>
+            <input type="text" class="form-control"
+              [(ngModel)]="updateStudent.Name" #txtName="ngModel"
+             id="txtName" name="txtName" required  placeholder="Name">
+
+            <small [hidden]="txtName.valid || txtName.pristine"  class="form-text  text-danger">Student name required.</small>
+          </div>
+          <div class="form-group col-xs-12">
+            <label for="seCourse">Course</label>
+            <select class="form-control"
+            [(ngModel)]="updateStudent.CourseID"
+             id="seCourse" name="seCourse">
+                        <option value="-1">  </option>
+                        <option *ngFor="let course of SchoolData.Courses" [value]="course.CourseID">{{course.Name}}</option>
+              </select>
+          </div>
+
+          <div class="form-group col-xs-12">
+            <label for="txtYear">Year</label>
+            <input type="number" class="form-control" id="txtYear" name="txtYear" 
+            
+              [(ngModel)]="updateStudent.Year"  #aYear="ngModel"
+             placeholder="Year">
+
+  
+           </div>
+
+          <div class="form-group col-xs-3">
+            <label for="seGrade">Grade</label>
+            <select  class="form-control" id="seGrade" name="seGrade"
+               [(ngModel)]="updateStudent.Grade"
+            >
+                     <option> </option>
+                     <option *ngFor="let grade of grades" [value]="grade">{{grade}}</option>
+                      </select>
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-secondary" (click)="editModal.hide()" data-dismiss="modal">Close</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+
+

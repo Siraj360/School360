@@ -5,8 +5,16 @@
  -->
 
 <div class="container-flude p-y-1 p-x-1">
-        <h4 class="text-primary">Course listing with students enrolled in the course</h4>
 
+  <div class="row">
+    <div class="col-md-6">
+      <h4 class="text-primary">Course listing with students enrolled in the course</h4>
+    </div>
+    <div class="col-md-6">
+      <button type="button" (click)="editCourse()" class="btn btn-success pull-right btn-sm">
+        <i class="fa fa-plus-square-o" aria-hidden="true"></i> Add Course</button>
+    </div>
+  </div>
   <div class="row">
 
 
@@ -27,8 +35,12 @@
           <td>
             <strong>{{Course.Name}}                           
                         </strong>
+        <button type="button" (click)="editCourse(Course)" class="btn btn-primary pull-right btn-sm">
+         <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit
+       </button>
             <div class="text-muted hidden-md-up">
               {{Course.Description}}
+       
             </div>
           </td>
           <td class="hidden-sm-down">
@@ -104,29 +116,53 @@
 </div>
 
 
-<!--
-<div bsModal #timeLineModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-md" *ngIf="selectedTimeLine" >
-     <div class="modal-body">
-                    <history-item 
-                     [time-line]="selectedTimeLine"
-                     [timeLineModal] ="timeLineModal"
-                     >
-                 </history-item>
+
+<div bsModal #editModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="studentedit" aria-hidden="true">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close pull-right" (click)="editModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+             </button>
+        <h4 class="modal-title pul-left"><strong>
+          {{this.isNewCourse? 'New Course' : updateCourse.Name }}
+          
+          </strong></h4>
 
 
- 
       </div>
 
- 
- 
- 
- 
- 
- 
- 
-    </div>
+      <form (ngSubmit)="saveChanges()" #studentForm="ngForm">
 
-   
+        <div class="modal-body row">
+
+          <div class="form-group col-md-12 col-lg-12">
+            <label for="txtName">Title</label>
+            <input type="text" class="form-control" [(ngModel)]="updateCourse.Name" #txtName="ngModel" id="txtName" name="txtName" required
+              placeholder="Name">
+
+            <small [hidden]="txtName.valid || txtName.pristine" class="form-text  text-danger">Course title required.</small>
+          </div>
+
+
+          <div class="form-group col-md-12 col-lg-12">
+            <label for="txtName">Description</label>
+            <textarea type="text" class="form-control" [(ngModel)]="updateCourse.Description" id="txtDescription" name="txtDescription"
+              rows="3" placeholder="Description">
+             </textarea>
+
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-secondary" (click)="editModal.hide()" data-dismiss="modal">Close</button>
+        </div>
+
+      </form>
+    </div>
   </div>
-    -->
+</div>
+
+
